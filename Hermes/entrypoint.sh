@@ -54,7 +54,7 @@ if [ -f /root/.pm2/dump.pm2 ]; then
   pm2 resurrect
 else
   echo "No dump, starting fresh..."
-  pm2 start "hermes gateway run" --name "hermes-default"
+  #pm2 start "hermes gateway run" --name "hermes-default"
   pm2 start "hermes-web-ui start" --name "hermes-web-ui"
   pm2 startup
   pm2 save
